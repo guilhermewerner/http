@@ -1,0 +1,21 @@
+[package]
+name = "Http"
+version = "0.0.1"
+description = "TribuFu Http"
+repository = "https://github.com/TribuFu/Http"
+authors = ["TribuFu <contact@tribufu.com>"]
+license = "MIT"
+edition = "2018"
+publish = false
+
+[lib]
+name="Http"
+crate-type = ["rlib"]
+path = "Source/Http.rs"
+
+[[bin]]
+name="HttpServer"
+path = "Source/Main.rs"
+doc = false
+
+[dependencies]
