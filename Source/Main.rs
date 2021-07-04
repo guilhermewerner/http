@@ -2,4 +2,6 @@
 
 #![allow(non_snake_case)]
 
-fn main() {}
+fn main() {
+    Http::Main();
+}
