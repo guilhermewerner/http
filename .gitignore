@@ -1,15 +1,4 @@
-# Binary Files
-
 Binaries/
-
-# Cargo Files
-
 Cargo.lock
-
-# Packaged Artifacts
-
-Release/
-
-# Mac OSX
 
 .DS_Store
