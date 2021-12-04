@@ -1,7 +1,11 @@
-// Copyright (c) TribuFu. All Rights Reserved.
-
 #![allow(non_snake_case)]
 
+use std::net::TcpListener;
+
 fn main() {
-    Http::Main();
+    let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
+
+    for stream in listener.incoming() {
+        Http::HandleConnection(stream.unwrap());
+    }
 }

@@ -1,24 +1,10 @@
-// Copyright (c) TribuFu. All Rights Reserved.
-
 #![allow(non_snake_case)]
 
 use std::fs;
 use std::io::prelude::*;
-use std::net::TcpListener;
 use std::net::TcpStream;
 
-#[doc(hidden)]
-pub fn Main() {
-    let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
-
-    for stream in listener.incoming() {
-        let stream = stream.unwrap();
-
-        HandleConnection(stream);
-    }
-}
-
-fn HandleConnection(mut stream: TcpStream) {
+pub fn HandleConnection(mut stream: TcpStream) {
     let mut buffer = [0; 1024];
     stream.read(&mut buffer).unwrap();
 

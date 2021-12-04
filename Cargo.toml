@@ -1,21 +1,20 @@
 [package]
 name = "Http"
 version = "0.0.1"
-description = "TribuFu Http"
-repository = "https://github.com/TribuFu/Http"
-authors = ["TribuFu <contact@tribufu.com>"]
+description = "Http Server"
+repository = "https://github.com/GuilhermeWerner/Http"
 license = "MIT"
-edition = "2018"
+edition = "2021"
 publish = false
 
 [lib]
 name="Http"
 crate-type = ["rlib"]
-path = "Source/Http.rs"
+path = "Source/lib.rs"
 
 [[bin]]
 name="HttpServer"
-path = "Source/Main.rs"
+path = "Source/main.rs"
 doc = false
 
 [dependencies]
