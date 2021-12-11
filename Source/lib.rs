@@ -10,7 +10,7 @@ pub fn HandleConnection(mut stream: TcpStream) {
 
     let get = b"GET / HTTP/1.1\r\n";
 
-    let (status_line, filename) = if buffer.starts_with(get) {
+    let (status, filename) = if buffer.starts_with(get) {
         ("HTTP/1.1 200 OK", "Hello.html")
     } else {
         ("HTTP/1.1 404 NOT FOUND", "404.html")
@@ -20,7 +20,7 @@ pub fn HandleConnection(mut stream: TcpStream) {
 
     let response = format!(
         "{}\r\nContent-Length: {}\r\n\r\n{}",
-        status_line,
+        status,
         contents.len(),
         contents,
     );
